@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Weather Api App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<link href="styles/main.css" rel="stylesheet" type="text/css">
+<script src="scripts/app.js"></script>
+</head>
+
+<body ng-app='weatherApiApp'>
+  <div ng-controller="mainCtrl" class='container'>
+    <div class='header'>
+      <h1 ng-click='helloWorld()'>Free Code Camp Weather App</h1>
+    </div>
+    <div>
+      {{latitude}}
+    </div>
+  </div>
+</body>
+
+</html>
