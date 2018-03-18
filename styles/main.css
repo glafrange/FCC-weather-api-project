@@ -1,6 +1,25 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
-  background-color: grey;
+  background-color: black;
 }
 .container {
   text-align: center;
+}
+
+div > h1 {
+  height: 20px;
+  font-size: 75px;
+  margin-bottom: 75px;
+  color: white;
+}
+
+div > h1 + h1 {
+  padding-bottom: 75px;
+}
+
+p {
+  color: white;
 }
