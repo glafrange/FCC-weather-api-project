@@ -6,6 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 <link href="styles/main.css" rel="stylesheet" type="text/css">
 <script src="scripts/app.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
 </head>
 
 <body ng-app='weatherApiApp'>
@@ -16,7 +17,15 @@
     </div>
     <p>{{location}}</p>
     <p ng-click="changeMeasurement()">{{temp}}</p>
+    <img ng-if='weatherData.weather[0].main == "Thunderstorm"' src='https://openweathermap.org/img/w/11d.png'>
+    <img ng-if='weatherData.weather[0].main == "Mist"' src='https://openweathermap.org/img/w/50d.png'>
+    <img ng-if='weatherData.weather[0].main == "Rain"' src='https://openweathermap.org/img/w/10d.png'>
+    <img ng-if='weatherData.weather[0].main == "Clouds"' src='https://openweathermap.org/img/w/04d.png'>
+    <img ng-if='weatherData.weather[0].main == "Drizzle"' src='https://openweathermap.org/img/w/09d.png'>
+    <img ng-if='weatherData.weather[0].main == "Clear"' src='https://openweathermap.org/img/w/01d.png'>
+    <img ng-if='weatherData.weather[0].main == "Snow"' src='https://openweathermap.org/img/w/13d.png'>
   </div>
+  
 </body>
 
 </html>

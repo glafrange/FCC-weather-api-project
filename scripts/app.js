@@ -12,6 +12,7 @@ angular.module('weatherApiApp', [])
 
 .controller('mainCtrl', function($scope, weatherService){
   
+  
   $scope.changeMeasurement = function(){
     if($scope.temp.endsWith('C')){
       $scope.temp = $scope.weatherData.main.temp * 2 + 30 + " F";
@@ -26,6 +27,7 @@ angular.module('weatherApiApp', [])
       $scope.longitude = position.coords.longitude;
       weatherService.getWeather($scope.latitude, $scope.longitude, function(response){
         $scope.weatherData = response.data;
+        console.log($scope.weatherData);
         $scope.temp = $scope.weatherData.main.temp + " C";
         $scope.location = $scope.weatherData.name + ", " + $scope.weatherData.sys.country;
       });
