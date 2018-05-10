@@ -19,6 +19,7 @@
     <p ng-click="changeMeasurement()">{{temp}}</p>
     <img ng-if='weatherData.weather[0].main == "Thunderstorm"' src='https://openweathermap.org/img/w/11d.png'>
     <img ng-if='weatherData.weather[0].main == "Mist"' src='https://openweathermap.org/img/w/50d.png'>
+    <img ng-if='weatherData.weather[0].main == "Haze"' src='https://openweathermap.org/img/w/50d.png'>
     <img ng-if='weatherData.weather[0].main == "Rain"' src='https://openweathermap.org/img/w/10d.png'>
     <img ng-if='weatherData.weather[0].main == "Clouds"' src='https://openweathermap.org/img/w/04d.png'>
     <img ng-if='weatherData.weather[0].main == "Drizzle"' src='https://openweathermap.org/img/w/09d.png'>
