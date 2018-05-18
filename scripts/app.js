@@ -15,9 +15,9 @@ angular.module('weatherApiApp', [])
   
   $scope.changeMeasurement = function(){
     if($scope.temp.endsWith('C')){
-      $scope.temp = parseInt($scope.weatherData.main.temp) * 2 + 30 + " F";
+      $scope.temp = parseInt($scope.weatherData.main.temp) * 2 + 30 + String.fromCharCode(176) + "F";
     } else if ($scope.temp.endsWith('F')){
-      $scope.temp = parseInt($scope.weatherData.main.temp) + " C"
+      $scope.temp = parseInt($scope.weatherData.main.temp) + String.fromCharCode(176) + "C"
     }
   }
   
@@ -28,7 +28,7 @@ angular.module('weatherApiApp', [])
       weatherService.getWeather($scope.latitude, $scope.longitude, function(response){
         $scope.weatherData = response.data;
         console.log($scope.weatherData);
-        $scope.temp = parseInt($scope.weatherData.main.temp) + " C";
+        $scope.temp = parseInt($scope.weatherData.main.temp) + String.fromCharCode(176) + "C";
         $scope.location = $scope.weatherData.name + ", " + $scope.weatherData.sys.country;
       });
     });

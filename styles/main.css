@@ -1,25 +1,19 @@
-*{
-  box-sizing: border-box;
-}
-
 body {
-  background-color: black;
+  background-color: #82BC3F;
 }
 .container {
   text-align: center;
 }
 
-div > h1 {
+.header > h1 {
   height: 20px;
   font-size: 75px;
   margin-bottom: 75px;
   color: white;
-}
-
-div > h1 + h1 {
   padding-bottom: 75px;
 }
 
 p {
   color: white;
+  font-size: 20px;
 }

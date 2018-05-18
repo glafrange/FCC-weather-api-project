@@ -1,1 +1,1 @@
-# FCC-weather-api-project
+# FCC-weather-app-project
