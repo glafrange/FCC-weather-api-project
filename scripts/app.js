@@ -5,10 +5,10 @@ $(document).ready(function(){
   function changeMeasurement(){
     if(temp.endsWith('C')){
       temp = parseInt(weatherData.main.temp) * 2 + 30 + String.fromCharCode(176) + "F";
-      $('#temp').html(temp);
+      $('#temp').html("The temperature is: " + temp);
     } else if (temp.endsWith('F')){
       temp = parseInt(weatherData.main.temp) + String.fromCharCode(176) + "C"
-      $('#temp').html(temp);
+      $('#temp').html("The temperature is: " + temp);
     }
   }
 
@@ -35,9 +35,9 @@ $(document).ready(function(){
       $.getJSON(url, function(data){
         weatherData = data;
         temp = parseInt(weatherData.main.temp) + String.fromCharCode(176) + "C";
-        $('#temp').html(temp);
+        $('#temp').html("The temperature is: " + temp);
         location = weatherData.name + ", " + weatherData.sys.country;
-        $('#location').html(location);
+        $('#location').html("You are in " + location);
         id = weatherData.weather[0].id;
         addIcon();
       });
