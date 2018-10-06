@@ -12,7 +12,8 @@ $(document).ready(function(){
     }
   }
 
-  $('#temp').on('click', changeMeasurement);
+  // $('#temp').on('click', changeMeasurement);
+	$('#toggleCelsiusFahrenheit').on('click', changeMeasurement);
 
   function addIcon(){
     idMap = {
